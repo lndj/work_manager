@@ -20,10 +20,16 @@ function createWindow () {
    * Initial window options
    */
   mainWindow = new BrowserWindow({
+    // show: false,
     height: 563,
     useContentSize: true,
-    width: 1000
+    width: 1000,
+    titleBarStyle: 'hidden'
   })
+
+  // mainWindow.once('ready-to-show', () => {
+  //   mainWindow.show()
+  // })
 
   mainWindow.loadURL(winURL)
 
